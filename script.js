@@ -6,6 +6,8 @@ const navSlide = () => {
     burger.addEventListener('click', () => {
         //Toggle Nav
         nav.classList.toggle('nav-active');
+        nav.classList.remove('nav-activex');
+        
 
         //Animate Links
         navLinks.forEach((link, index) => {
@@ -20,6 +22,29 @@ const navSlide = () => {
         //Burger Animation
         burger.classList.toggle('toggle');
     });
+
+    
+    
+
+    $(document).ready(function () {
+        $(window).on('load scroll', function () {
+            $("ul").addClass("nav-activex")
+           
+
+        })
+        
+    })
+
 }
 
+// const vanish = () =>{
+//         document.addEventListener('scroll', () => {
+//         document.querySelector('.nav-active').style.transform = "translateX(100%)";
+//     })
+// }
+
 navSlide();
+
+
+
+
